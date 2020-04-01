@@ -193,8 +193,17 @@
                 <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
                     <span class="carousel-control-next-icon"></span>
                 </a>
+                <div class="btn btn-group" id="carouselButton">
+                    <button class="btn btn-sm btn-danger" id="carousel-pause">
+                        <span class="fa fa-pause"></span>
+                    </button>
+                    <button class="btn btn-danger btn-sm" id="carousel-play">
+                        <span class="fa fa-play"></span>
+                    </button>
+                </div>
             </div>
         </div>
+
         <div class="row row-content align-items-center">
             <div class="col-12 col-sm-4 col-md-3 order-sm-last">
                 <h3>Our Lipsmacking Culinary Creations</h3>
@@ -310,8 +319,8 @@
                                 </div>
                             </div>
                             <div class="row form-group">
-                                <label for="section" class="col-12 col-sm-2 col-form-label">Section</label>
-                                <div class="btn-group" role="group">
+                                <label for="section" class="col-sm-2 col-form-label">Section</label>
+                                <div class="btn-group col-12 col-sm-auto" role="group">
                                     <input class="btn btn-sm btn-success" type="button" id="section1"
                                         value="Non-Smoking">
                                     <input class="btn btn-sm btn-danger" type="button" id="section2" value="Smoking">
@@ -319,12 +328,16 @@
                                 </div>
                             </div>
                             <div class="row form-group">
-                                <label for="dateandtime" class="col-12 col-sm-2 col-form-label">Date and Time</label>
-                                <div class="col-12 col-sm-10 form-group row">
-                                    <input class="col-12 col-sm-5 form-control" type="text" name="date" id="date"
-                                        placeholder="Date">
-                                    <input class="col-12 col-sm-5 offset-sm-1 form-control" type="text" name="time"
-                                        id="time" placeholder="Time">
+                                <label for="dateandtime" class="col-sm-2 col-form-label">Date and Time</label>
+                                <div class="col-sm-auto col-12 form-group row">
+                                    <div class="form-group col-sm-5">
+                                        <input class="form-control" type="text" name="date" id="date"
+                                            placeholder="Date">
+                                    </div>
+                                    <div class="form-group col-sm-5">
+                                        <input class="form-control" type="text" name="time" id="time"
+                                            placeholder="Time">
+                                    </div>
                                 </div>
 
 
@@ -400,6 +413,18 @@
             $('[data-toggle="tooltip"]').tooltip();
         });
     </script> -->
+    <script>
+        $(document).ready(function(){
+            $('#myCarousel').carousel({interval:2000});
+            $('#carousel-pause').click(function(){
+                $('#myCarousel').carousel('pause');
+            });
+            $('#carousel-play').click(function(){
+                $('#myCarousel').carousel('cycle');
+            });
+
+        });
+    </script>
 
 </body>
 
