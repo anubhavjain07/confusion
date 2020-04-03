@@ -8,10 +8,12 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
     <!-- Bootstrap CSS -->
+    <!-- build:css css/main.css -->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
     <liink rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
+        <!-- endbuild -->
         <title>Ristorante Con Fusion</title>
 </head>
 
@@ -122,8 +124,8 @@
                     <!-- <a href="#reserveTable" class="btn btn-warning nav-link btn-block" role="button" data-html="true"
                         data-placement="bottom" data-toggle="tooltip"
                         title="Or Call us at<br><strong>+91 9116798770</strong>">Reserve Table</a> -->
-                    <a id="reserveTableButton" class="btn btn-warning nav-link btn-block"
-                        role="button">Reserve Table</a>
+                    <a id="reserveTableButton" class="btn btn-warning nav-link btn-block" role="button">Reserve
+                        Table</a>
                 </div>
             </div>
         </div>
@@ -400,50 +402,18 @@
         </div>
     </footer>
     <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
+    <!-- build:js js/main.js -->
+
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <!-- endbuild -->
     <!-- <script>
         $(document).ready(function () {
             $('[data-toggle="tooltip"]').tooltip();
         });
     </script> -->
-    <script>
-        $(document).ready(function(){
-            $('.carousel').carousel( { interval: 2000 } );
-            $('#carouselButton').click(function(){
-                if($('#carouselButton').children('span').hasClass('fa-pause'))
-                {
-                    $('#myCarousel').carousel('pause');
-                    $('#carouselButton').children('span').removeClass('fa-pause');
-                    $('#carouselButton').children('span').addClass('fa-play');
-
-                }
-                else
-                {
-                    $('#myCarousel').carousel('cycle');
-                    $('#carouselButton').children('span').removeClass('fa-play');
-                    $('#carouselButton').children('span').addClass('fa-pause');
-
-                }
-                
-            });
-
-            $('#loginButton').click(function(){
-                $('#loginModal').modal('toggle');
-
-            });
-
-            $('#reserveTableButton').click(function(){
-                $('#reserveTable').modal('toggle');
-            });
-
-
-
-            
-
-        });
-    </script>
 
 </body>
 
