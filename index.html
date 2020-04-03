@@ -35,7 +35,7 @@
                                 class="fa fa-address-card fa-lg"></i> Contact</a></li>
                 </ul>
                 <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginModal" class="nav-link">
+                    <a id="loginButton" role="button" class="nav-link">
                         <span class="fa fa-sign-in"></span> Login
                     </a>
                 </span>
@@ -122,7 +122,7 @@
                     <!-- <a href="#reserveTable" class="btn btn-warning nav-link btn-block" role="button" data-html="true"
                         data-placement="bottom" data-toggle="tooltip"
                         title="Or Call us at<br><strong>+91 9116798770</strong>">Reserve Table</a> -->
-                    <a data-target="#reserveTable" data-toggle="modal" class="btn btn-warning nav-link btn-block"
+                    <a id="reserveTableButton" class="btn btn-warning nav-link btn-block"
                         role="button">Reserve Table</a>
                 </div>
             </div>
@@ -428,6 +428,19 @@
                 }
                 
             });
+
+            $('#loginButton').click(function(){
+                $('#loginModal').modal('toggle');
+
+            });
+
+            $('#reserveTableButton').click(function(){
+                $('#reserveTable').modal('toggle');
+            });
+
+
+
+            
 
         });
     </script>
