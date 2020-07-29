@@ -2,9 +2,9 @@
   "name": "confusion",
   "version": "1.0.0",
   "description": "This is a website for Ristorante Con Fusion",
-  "main": "index.html",
+  "main": "app.js",
   "scripts": {
-    "start": "npm run watch:all",
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lite": "lite-server",
     "scss": "node-sass -o css/ css/",
@@ -14,9 +14,10 @@
     "copyfonts": "copyfiles -f node_modules/font-awesome/fonts/* dist/fonts",
     "imagemin": "imagemin img/* --out-dir=\"dist/img\"",
     "usemin": "usemin contactus.html -d dist --htmlmin -o dist/contactus.html && usemin aboutus.html -d dist --htmlmin -o dist/aboutus.html && usemin index.html -d dist --htmlmin -o dist/index.html",
-    "build": "npm run clean && npm run imagemin && npm run copyfonts && npm run usemin"
+    "build": "npm run clean && npm run imagemin && npm run copyfonts && npm run usemin",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install && npm run build"
   },
-  "author": "",
+  "author": "Anubhav Jain",
   "license": "ISC",
   "devDependencies": {
     "cssmin": "^0.4.3",
@@ -33,6 +34,7 @@
   "dependencies": {
     "bootstrap": "^4.3.1",
     "bootstrap-social": "^5.1.1",
+    "express": "^4.17.1",
     "font-awesome": "^4.7.0",
     "jquery": "^3.4.0",
     "jshint": "^2.11.0",
